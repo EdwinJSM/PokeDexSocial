@@ -1,0 +1,14 @@
+.cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.wrapper{
+  margin-top: 7vh;
+  margin-right: 0.8vw;
+  margin-left: 0.8vw;
+  overflow-y: auto;
+  max-height: 75vh;
+}

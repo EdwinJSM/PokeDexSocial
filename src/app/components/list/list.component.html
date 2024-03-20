@@ -1,0 +1,11 @@
+<div class="wrapper" #uiElement (scroll)="onScrollLoadData()" >
+  <div class="options">
+    <div class="search"></div>
+    <div class="filter"></div>
+  </div>
+  <div class="cards">
+    <div *ngFor="let pokemon of pokemonsShowed" >
+      <app-display-card [data]="pokemon"></app-display-card>
+    </div>
+  </div>
+</div>

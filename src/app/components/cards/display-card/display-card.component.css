@@ -1,0 +1,88 @@
+.wrapper{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  max-height: 300px;
+  min-height: 200px;
+  border-radius: 20px;
+  background: #333333;
+  box-shadow: inset 20px 20px 60px #2b2b2b,
+              inset -20px -20px 60px #3b3b3b;
+  transition: 0.7s;
+}
+
+.wrapper:hover
+{
+  transform: translateY(-10px);
+  background: #333333;
+  box-shadow: inset -20px -20px 60px #2b2b2b,
+              inset 20px 20px 60px #3b3b3b;
+}
+
+.wrapper:hover img
+{
+  border-radius: 30%;
+  padding: 20px;
+}
+
+
+.foto {
+  grid-area: 1 / 1 / 4 / 3;
+  display: grid;
+  place-items: center;
+}
+.foto img{
+  background-color: white;
+  border-radius: 100%;
+  min-height: 100px;
+  max-height: 300px;
+  padding: 10px;
+  transition: 0.3s;
+}
+.nombre {
+  grid-area: 1 / 3 / 2 / 5;
+  display: grid;
+  place-items:end center;
+  font-size: x-large;
+  font-weight: bold;
+}
+.tipos {
+  grid-area: 2 / 3 / 4 / 5;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: medium;
+}
+.tipo{
+  border-radius: 20%;
+  border: solid white;
+  padding: 10px;
+  font-size: smaller;
+  font-weight:bold
+}
+
+.normal { background-color: rgb(105, 174, 35); }
+.fighting { background-color: rgb(192, 48, 40); }
+.flying { background-color: rgb(152, 124, 195); }
+.poison { background-color: rgb(163, 62, 161); }
+.ground { background-color: rgb(227, 114, 60); }
+.rock { background-color: rgb(183, 159, 59); }
+.bug { background-color: rgb(117, 131, 41); }
+.ghost { background-color: rgb(102, 78, 156); }
+.steel { background-color: rgb(180, 180, 180); }
+.fire { background-color: rgb(251, 85, 53); }
+.water { background-color: rgb(77, 130, 209); }
+.grass { background-color: rgb(122, 194, 82); }
+.electric { background-color: rgb(252, 211, 39); }
+.psychic { background-color: rgb(249, 85, 135); }
+.ice { background-color: rgb(155, 227, 251); }
+.dragon { background-color: rgb(108, 88, 241); }
+.dark { background-color: rgb(81, 73, 91); }
+.fairy { background-color: rgb(253, 185, 230); }
+.unknown { background-color: rgb(204, 204, 204); }
+.shadow { background-color: rgb(51, 51, 51); }
