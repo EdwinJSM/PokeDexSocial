@@ -8,8 +8,8 @@ import { DetailsComponent } from './components/details/details.component';
 import { NotFoundComponent } from './components/miscelaneos/not-found/not-found.component';
 import { DisplayCardComponent } from './components/cards/display-card/display-card.component';
 import { DetailedCardComponent } from './components/cards/detailed-card/detailed-card.component';
-import { PokemonService } from './services/pokemon.service';
 import { CommentsBoxComponent } from './components/comments-box/comments-box.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -26,6 +26,7 @@ import { CommentsBoxComponent } from './components/comments-box/comments-box.com
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

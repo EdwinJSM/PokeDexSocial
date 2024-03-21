@@ -5,6 +5,7 @@
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   max-height: 300px;
+  max-width: 500px;
   min-height: 200px;
   border-radius: 20px;
   background: #333333;
@@ -45,7 +46,7 @@
   grid-area: 1 / 3 / 2 / 5;
   display: grid;
   place-items:end center;
-  font-size: x-large;
+  font-size: large;
   font-weight: bold;
 }
 .tipos {
@@ -59,13 +60,17 @@
   font-size: medium;
 }
 .tipo{
-  border-radius: 20%;
+  border-radius: 10px;
   border: solid white;
   padding: 10px;
   font-size: smaller;
   font-weight:bold
 }
-
+.box{
+  -webkit-box-shadow: 7px 5px 0px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 7px 5px 0px 0px rgba(0,0,0,0.75);
+  box-shadow: 7px 5px 0px 0px rgba(0,0,0,0.75);
+}
 .normal { background-color: rgb(105, 174, 35); }
 .fighting { background-color: rgb(192, 48, 40); }
 .flying { background-color: rgb(152, 124, 195); }

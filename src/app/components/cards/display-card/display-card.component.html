@@ -1,9 +1,9 @@
-<div class="wrapper" *ngIf="pokemonGotten">
+<div class="wrapper"*ngIf="pokemonGottem">
   <div class="foto">
-    <img [src]="pokemon.sprites.front_default" alt="imagen">
+    <img class="box" [src]="pokemon.sprites.front_default" alt="imagen">
   </div>
   <div class="nombre">{{pokemon.name  | titlecase}}</div>
   <div class="tipos">
-    <p *ngFor="let tipos of pokemon.types" [className]="tipos.type.name + ' tipo'">{{tipos.type.name  | titlecase}}</p>
+    <p *ngFor="let tipos of pokemon.types" [className]="tipos.type.name + ' tipo box'">{{tipos.type.name  | titlecase}}</p>
   </div>
 </div>

@@ -1,11 +1,14 @@
-<div class="wrapper" #uiElement (scroll)="onScrollLoadData()" >
+<div class="wrapper" (scroll)="onScrollLoadData()" #uiElement>
   <div class="options">
-    <div class="search"></div>
-    <div class="filter"></div>
-  </div>
-  <div class="cards">
-    <div *ngFor="let pokemon of pokemonsShowed" >
-      <app-display-card [data]="pokemon"></app-display-card>
+    <div class="search">
+      <input placeholder="Buscar Pokemon" class="box" [(ngModel)]="searchTerm" (ngModelChange)="searchPokemon()">
+    </div>
+    <div class="filter">
+      <button *ngFor="let type of types; let i = index" id="type{{i}}" [ngClass]="types[i].name + ' box'" (click)="filterType(i)">{{type.name | titlecase}}</button>
     </div>
   </div>
+  <div class="cards">
+    <app-display-card *ngFor="let pokemon of displayPokemons" [data]="pokemon"></app-display-card>
+  </div>
 </div>
+<button class="scrollTop" (click)="scrolltoTop()">⬆</button>
