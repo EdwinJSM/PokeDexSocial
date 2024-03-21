@@ -18,6 +18,9 @@ export class DisplayCardComponent implements OnInit {
       this.pokemonGottem = true
     }
   }
+  getImageSource(): string {
+    return  this.pokemon.sprites.front_default != null ? this.pokemon.sprites.front_default : './assets/Images/NotFound.jpg';
+  }
 }
 
 

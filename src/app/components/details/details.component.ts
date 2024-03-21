@@ -10,8 +10,11 @@ export class DetailsComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute) { }
 
+  pokemon: any;
   ngOnInit(): void {
-
+    this.activatedRoute.data.subscribe((response: any) => {
+      this.pokemon = response;
+    });
   }
 
 }

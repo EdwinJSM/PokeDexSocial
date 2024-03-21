@@ -1,6 +1,6 @@
 <div class="wrapper"*ngIf="pokemonGottem">
   <div class="foto">
-    <img class="box" [src]="pokemon.sprites.front_default" alt="imagen">
+    <img class="box" [src]="getImageSource()" >
   </div>
   <div class="nombre">{{pokemon.name  | titlecase}}</div>
   <div class="tipos">

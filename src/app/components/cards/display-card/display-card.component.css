@@ -38,7 +38,7 @@
   background-color: white;
   border-radius: 100%;
   min-height: 100px;
-  max-height: 300px;
+  max-width: 100px;
   padding: 10px;
   transition: 0.3s;
 }
@@ -46,7 +46,7 @@
   grid-area: 1 / 3 / 2 / 5;
   display: grid;
   place-items:end center;
-  font-size: large;
+  font-size: medium;
   font-weight: bold;
 }
 .tipos {

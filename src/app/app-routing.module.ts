@@ -4,6 +4,7 @@ import { ListComponent } from './components/list/list.component';
 import { DetailsComponent } from './components/details/details.component';
 import { NotFoundComponent } from './components/miscelaneos/not-found/not-found.component';
 import { PokemonResolverService } from './services/pokemon-resolver.service';
+import { PokemonDetailResolver } from './services/pokemon-detail.resolver';
 
 const routes: Routes = [
 {
@@ -12,8 +13,9 @@ const routes: Routes = [
   resolve: { pokemons: PokemonResolverService }
 },
 {
-  path: 'details',
-  component: DetailsComponent
+  path: 'details/:name',
+  component: DetailsComponent,
+  resolve: { pokemon: PokemonDetailResolver }
 },
 {
   path: '',
