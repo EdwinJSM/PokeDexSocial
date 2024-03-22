@@ -13,6 +13,7 @@
               inset -20px -20px 60px #3b3b3b;
   transition: 0.7s;
   cursor: pointer;
+  user-select: none;
 }
 
 .wrapper:hover

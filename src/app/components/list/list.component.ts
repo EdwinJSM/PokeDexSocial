@@ -29,9 +29,22 @@ export class ListComponent implements OnInit {
     });
   }
 
+
+  showPokemons()
+  {
+    this.scrollIndex += this.showAmount
+    this.displayPokemons = [...this.displayPokemons, ...this.listaToShow.slice(this.scrollIndex - this.showAmount, this.scrollIndex)]
+  }
+  onScrollLoadData(){
+    const nativeElement= this.uiElement?.nativeElement
+    console.log()
+    if(nativeElement.clientHeight + Math.round(nativeElement.scrollTop) + 10 >= nativeElement.scrollHeight  &&  this.displayPokemons.length < this.listaPokemons.length){
+      this.showPokemons()
+    }
+  }
   filterType(index:number)
   {
-    this.types.forEach((element,index) => {
+    this.types.forEach((_,index) => {
       document.getElementById('type'+index)?.classList.remove('selected')
     });
     if(this.filterTerm == index)
@@ -67,30 +80,6 @@ export class ListComponent implements OnInit {
     }
 
   }
-
-  showPokemons()
-  {
-    this.scrollIndex += this.showAmount
-    this.displayPokemons = [...this.displayPokemons, ...this.listaToShow.slice(this.scrollIndex - this.showAmount, this.scrollIndex)]
-  }
-  scrolltoTop()
-  {
-    const nativeElement= this.uiElement?.nativeElement
-    nativeElement.scroll({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
-  }
-
-  onScrollLoadData(){
-    const nativeElement= this.uiElement?.nativeElement
-    console.log()
-    if(nativeElement.clientHeight + Math.round(nativeElement.scrollTop) + 10 >= nativeElement.scrollHeight  &&  this.displayPokemons.length <= this.listaPokemons.length){
-      this.showPokemons()
-    }
-  }
-
   searchPokemon()
   {
     if(this.searchTerm !== '')
@@ -107,6 +96,15 @@ export class ListComponent implements OnInit {
       this.listaToShow = this.listaPokemons
       this.showPokemons()
     }
+  }
+  scrolltoTop()
+  {
+    const nativeElement= this.uiElement?.nativeElement
+    nativeElement.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
 }
 

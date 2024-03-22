@@ -11,6 +11,8 @@
   box-shadow: inset 40px 40px 80px #2b2b2b, inset -40px -40px 80px #3b3b3b;
   transition: 0.7s;
   margin-top: 4vh;
+  cursor: pointer;
+  user-select: none;
 }
 
 .wrapper:hover {

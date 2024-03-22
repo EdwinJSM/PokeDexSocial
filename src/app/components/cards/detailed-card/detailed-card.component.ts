@@ -18,8 +18,6 @@ export class DetailedCardComponent implements OnInit {
     "back_default",
     "front_shiny",
     "back_shiny",
-    "front_female",
-    "back_female",
   ];
   currentSprite:string = '';
   ngOnInit(): void {
