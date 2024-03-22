@@ -1,4 +1,4 @@
-<div class="wrapper"*ngIf="pokemonGottem">
+<div class="wrapper"*ngIf="pokemonGottem" [routerLink]="['../','details', pokemon.name]">
   <div class="foto">
     <img class="box" [src]="getImageSource()" >
   </div>

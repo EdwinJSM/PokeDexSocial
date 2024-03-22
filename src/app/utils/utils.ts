@@ -20,3 +20,14 @@ export function getPokemonTypes() { return [
 ];
 }
 
+export function getStatIcons() {
+  return {
+    hp: "❤️",
+    attack: "⚔️",
+    defense: "🛡️",
+    "special-attack": "💥",
+    "special-defense": "🧱",
+    speed: "⚡️"
+  };
+}
+

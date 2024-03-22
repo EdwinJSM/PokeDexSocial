@@ -13,7 +13,9 @@ export class DetailsComponent implements OnInit {
   pokemon: any;
   ngOnInit(): void {
     this.activatedRoute.data.subscribe((response: any) => {
-      this.pokemon = response;
+      let pokemonWithAbilities = response.pokemon
+      pokemonWithAbilities.abilities = response.abilities
+      this.pokemon = pokemonWithAbilities;
     });
   }
 

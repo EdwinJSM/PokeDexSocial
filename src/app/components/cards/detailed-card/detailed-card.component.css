@@ -1,0 +1,103 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 90vw;
+  background: #333333;
+  box-shadow: inset 40px 40px 80px #2b2b2b, inset -40px -40px 80px #3b3b3b;
+  transition: 0.7s;
+  margin-top: 4vh;
+}
+
+.wrapper:hover {
+  transform: translateY(-10px);
+  background: #333333;
+  box-shadow: inset -40px -40px 80px #2b2b2b, inset 40px 40px 80px #3b3b3b;
+}
+
+.imagenName img {
+  margin-top: 4vh;
+  height: 25vh;
+  width: auto;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.wrapper:hover .imagenName img {
+  border-radius: 30%;
+  padding: 20px;
+}
+
+.imagenName {
+  padding-left: 5vw;
+  padding-right: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80vw;
+}
+
+.estadisticas,
+.tipos,
+.habilidades {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 80vw;
+  flex-wrap: wrap;
+}
+
+.estadisticas p,
+.tipos p,
+.habilidades p {
+  font-weight: bold;
+  font-size: small;
+}
+
+.borderBox {
+  border-radius: 5px;
+  border: solid white;
+  padding: 5px;
+  font-size: small;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.borderBox:hover {
+  transform: translateY(-5px);
+}
+
+.box{
+  -webkit-box-shadow: 7px 5px 0px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 7px 5px 0px 0px rgba(0,0,0,0.75);
+  box-shadow: 7px 5px 0px 0px rgba(0,0,0,0.75);
+}
+
+.normal { background-color: rgb(105, 174, 35); }
+.fighting { background-color: rgb(192, 48, 40); }
+.flying { background-color: rgb(152, 124, 195); }
+.poison { background-color: rgb(163, 62, 161); }
+.ground { background-color: rgb(227, 114, 60); }
+.rock { background-color: rgb(183, 159, 59); }
+.bug { background-color: rgb(117, 131, 41); }
+.ghost { background-color: rgb(102, 78, 156); }
+.steel { background-color: rgb(180, 180, 180); }
+.fire { background-color: rgb(251, 85, 53); }
+.water { background-color: rgb(77, 130, 209); }
+.grass { background-color: rgb(122, 194, 82); }
+.electric { background-color: rgb(252, 211, 39); }
+.psychic { background-color: rgb(249, 85, 135); }
+.ice { background-color: rgb(155, 227, 251); }
+.dragon { background-color: rgb(108, 88, 241); }
+.dark { background-color: rgb(81, 73, 91); }
+.fairy { background-color: rgb(253, 185, 230); }
+.unknown { background-color: rgb(204, 204, 204); }
+.shadow { background-color: rgb(51, 51, 51); }

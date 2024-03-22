@@ -21,4 +21,8 @@ export class PokemonService {
   getMoreDataByName(name: string): Observable<any> {
     return this.http.get(`https://pokeapi.co/api/v2/pokemon/${name}`);
   }
+
+  getAbilities(url: string): Observable<any> {
+    return this.http.get(url);
+  }
 }

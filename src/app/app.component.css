@@ -13,7 +13,9 @@
   margin-left: 1rem;
   margin-right: 1rem;
   display: flex;
+  cursor: pointer;
 }
+
 .red{
   color: rgb(248, 88, 88);
 }

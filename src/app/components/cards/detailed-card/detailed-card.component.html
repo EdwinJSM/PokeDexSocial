@@ -1,3 +1,21 @@
-<div class="wrapper" *ngIf="pokemonGottem">
-<div><p>{{pokemon.name}}</p></div>
+<div class="wrapper" *ngIf="pokemonGottem" (click)="getImageSource()">
+  <div class="imagenName">
+    <img  class="box" [src]="currentSprite">
+    <p>{{pokemon.name | titlecase}}</p>
+  </div>
+  <div class="tipos">
+    <p>Tipo:</p>
+    <p *ngFor="let type of pokemon.types" [className]="type.type.name + ' borderBox tipo box'">{{type.type.name | titlecase}}</p>
+  </div>
+
+  <div class="estadisticas">
+    <p>Stats:</p>
+      <p class="shadow borderBox box" *ngFor="let stats of pokemon.stats">{{pokemonStatIcons[stats.stat.name]}} {{stats.stat.name | titlecase}}: {{stats.base_stat}}</p>
+  </div>
+
+  <div class="habilidades">
+    <p>Abilities:</p>
+<p class="shadow borderBox box" *ngFor="let abilities of pokemon.abilities; let i= index">{{abilities.name | titlecase}}: {{pokemonAbilityDesc[i]}}</p>
+  </div>
+
 </div>
