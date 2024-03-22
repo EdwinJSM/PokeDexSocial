@@ -3,7 +3,7 @@
     <app-detailed-card [data]="pokemon"></app-detailed-card>
   </div>
   <div class="comments">
-    <app-comments-box>
+    <app-comments-box [data]="comments"[pokemonName]="pokemon.name">
     </app-comments-box>
   </div>
 </div>

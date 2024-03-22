@@ -6,6 +6,7 @@ import { NotFoundComponent } from './components/miscelaneos/not-found/not-found.
 import { PokemonResolverService } from './services/pokemon-resolver.service';
 import { PokemonDetailResolver } from './services/pokemon-detail.resolver';
 import { PokemonAbilitiesResolver } from './services/pokemon-abilities.resolver';
+import { CommentsResolver } from './services/comments.resolver';
 
 const routes: Routes = [
 {
@@ -16,7 +17,7 @@ const routes: Routes = [
 {
   path: 'details/:name',
   component: DetailsComponent,
-  resolve: { pokemon: PokemonDetailResolver, abilities: PokemonAbilitiesResolver }
+  resolve: { pokemon: PokemonDetailResolver, abilities: PokemonAbilitiesResolver, comments: CommentsResolver  }
 },
 {
   path: '',

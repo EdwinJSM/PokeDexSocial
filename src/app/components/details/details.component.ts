@@ -11,11 +11,13 @@ export class DetailsComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute) { }
 
   pokemon: any;
+  comments:any[] = [];
   ngOnInit(): void {
     this.activatedRoute.data.subscribe((response: any) => {
       let pokemonWithAbilities = response.pokemon
       pokemonWithAbilities.abilities = response.abilities
       this.pokemon = pokemonWithAbilities;
+      this.comments = response.comments;
     });
   }
 
