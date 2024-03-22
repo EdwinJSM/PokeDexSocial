@@ -45,7 +45,7 @@ export class DetailedCardComponent implements OnInit {
 
     if (nextSprite != null) {
       this.currentSpriteIndex = nextSpriteIndex;
-      this.currentSprite = nextSprite; // Update currentSprite property
+      this.currentSprite = nextSprite;
     } else {
       this.currentSpriteIndex = nextSpriteIndex;
       this.currentSprite = './assets/Images/NotFound.jpg';

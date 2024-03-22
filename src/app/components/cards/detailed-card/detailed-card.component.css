@@ -43,6 +43,7 @@
   align-items: center;
   flex-direction: column;
   width: 80vw;
+  font-size: 5vh;
 }
 
 .estadisticas,
@@ -55,6 +56,10 @@
   gap: 10px;
   width: 80vw;
   flex-wrap: wrap;
+}
+
+.habilidades{
+ margin-bottom: 2vh;
 }
 
 .estadisticas p,

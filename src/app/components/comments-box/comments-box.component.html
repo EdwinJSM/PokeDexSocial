@@ -1,9 +1,13 @@
 <div class="wrapper">
-  <input type="text" placeholder="Name" [(ngModel)]="name">
-  <input type="text" placeholder="Message" [(ngModel)]="message">
-  <button (click)="addComment()">Add</button>
-  <div class="comment" *ngFor="let c of comments">
-    <p>{{c.name}}: {{c.message}}  {{c.date | date : " hh:mm:ss EEEE  YYYY/MM/dd"}}</p>
-    <button (click)="deleteComment(c.id)">Delete</button>
+  <input class="box" type="text" placeholder="Name" [(ngModel)]="name">
+  <textarea class="box" type="text" placeholder="Message" [(ngModel)]="message"></textarea>
+  <button class=" btn green box" (click)="addComment()">Add</button>
+  <div class="commentWrapper">
+    <div class="comment" *ngFor="let c of comments">
+      <p class="nombre content">{{c.name}}</p>
+      <p class="message content">{{c.message}}</p>
+      <p class="fecha content">{{c.date | date : "YYYY/MM/dd hh:mm"}}H</p>
+      <button class="btn red box" (click)="deleteComment(c.id)">Delete</button>
+    </div>
   </div>
 </div>
